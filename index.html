@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundScape</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png">
+            <p>SoundScape</p>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+            <label For="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class='nav-links'>
+            <a href='#'>Home</a>
+            <a href='#'>Playlist</a>
+            <a href='#'>Library</a>
+            <a href='#'>Liked Songs</a>
+        </div>
+        <div class="container">
+            <form class="searchbox">
+                <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();"
+                    required>
+                <input type="submit" class="searchbox-submit" value="">
+                <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

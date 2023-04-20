@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+body {
+    background: rgb(147, 20, 102);
+    background: linear-gradient(356deg, rgba(147, 20, 102, 1) 12%, rgba(80, 18, 120, 1) 32%, rgba(44, 11, 111, 1) 40%, rgba(18, 5, 84, 1) 58%, rgba(76, 4, 66, 1) 100%);
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*position: fixed;*/
+    /* background-color: rgba(0, 0, 0, 0.477); */
+}
+
+.logo {
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin:10px;
+}
+
+.logo p{
+    font-size: 25px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav-links {
+    /* width: 50%; */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    padding: 20px 25px;
+    font-family: 'Titillium Web', sans-serif;
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.505);
+    color: white;
+
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav-links a:hover {
+    box-shadow: inset 150px 0 0 0 rgba(255, 255, 255, 0.562);
+    color: black;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+.container {
+    width: 400px;
+    padding: 10px 20px;
+    /* margin: 50px auto; */
+}
+
+.searchbox {
+    position: relative;
+    
+    min-width: 50px;
+    width: 0%;
+    height: 40px;
+    float: right;
+    overflow: hidden;
+
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+.searchbox-input {
+    /* top: 0;
+    right: 0; */
+    border: 0;
+    outline: 0;
+    /* background: #dcddd86d; */
+    background: none;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0px 55px 0px 20px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+}
+
+.searchbox-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.361);
+}
+
+.searchbox-input:-moz-placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.searchbox-input::-moz-placeholder {
+    color: #ffffff;
+}
+
+.searchbox-input:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.searchbox-icon,
+.searchbox-submit {
+    width: 50px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 0;
+    font-family: verdana;
+    font-size: 19px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    color: white;
+    /* background: #dcddd86d; */
+}
+
+.searchbox-open {
+    width: 100%;
+    background: #dcddd86d;
+    border-radius: 20px;
+}
+
+.byline {
+    position: absolute;
+    top: 150px;
+    left: 30%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.byline a {
+    text-decoration: none;
+    color: #d74b4b;
+}
+
+@media (max-width:767px) {
+    .container,.searchbox {
+        width: 0;
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav {
+        background-color: rgba(0, 0, 0, 0.477);
+    }
+    
+    .nav>.nav-btn {
+        display: inline;
+        float: right;
+    }
+
+    .nav-btn>label {
+        display: inline-block;
+        padding: 15px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 30px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        background-color: rgba(37, 37, 37, 0.845);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 75px;
+        left: 0px;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 25px;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
