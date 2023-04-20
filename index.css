@@ -71,7 +71,7 @@ body {
 }
 
 .container {
-    width: 400px;
+    width: 30%;
     padding: 10px 20px;
     /* margin: 50px auto; */
 }
@@ -165,7 +165,7 @@ body {
 }
 
 .wrapper {
-    height: 55vh;
+    height: 50vh;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 90%);
     display: flex;
@@ -281,8 +281,42 @@ body {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    outline: none;
+    align-items: center;
+}
+
+.b1,.b2,.b3 {
+    cursor: pointer;
+}
+
+.b1 {
+    height: 50px;
+    background: #4FC7C7;
+    outline: none;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+}
+
+.b2 {
+    height: 50px;
+    background: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: 2px solid #4FC7C7;
+}
+ 
+.b3 {
+    background: none;
+    outline: none;
+    border: none;
+    width: 30px;
+}
+
+.b3 img {
+    width: 100%;
 }
 
 .artists {
@@ -415,70 +449,85 @@ body {
     top: 420px;
 }
 
-@media (max-width:767px) {
-    .container,.searchbox {
-        width: 0;
-        display: none;
-        visibility: hidden;
-    }
 
-    .nav {
-        background-color: rgba(0, 0, 0, 0.477);
-    }
+/* Both Tablet and Mobile */
+@media only screen and (max-width: 1023px) {
+    .container,
+        .searchbox {
+            width: 0;
+            display: none;
+            visibility: hidden;
+        }
     
-    .nav>.nav-btn {
-        display: inline;
-        float: right;
-    }
-
-    .nav-btn>label {
-        display: inline-block;
-        padding: 15px;
-    }
-
-    .nav>.nav-btn>label:hover,
-    .nav #nav-check:checked~.nav-btn>label {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    .nav>.nav-btn>label>span {
-        display: block;
-        width: 30px;
-        height: 10px;
-        border-top: 2px solid #eee;
-    }
-
-    .nav>.nav-links {
-        position: absolute;
-        z-index: 1;
-        display: block;
-        width: 100%;
-        background-color: rgba(37, 37, 37, 0.845);
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow-y: hidden;
-        top: 75px;
-        left: 0px;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 25px;
-    }
-
-    .nav>#nav-check:not(:checked)~.nav-links {
-        height: 0px;
-    }
-
-    .nav>#nav-check:checked~.nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-    }
-
-    .wrapper {
-        flex-direction: column;
-    }
-    .somebox, .box{
-        width: 100%;
-    }
+        .nav {
+            background-color: rgba(0, 0, 0, 0.477);
+        }
+    
+        .nav>.nav-btn {
+            display: inline;
+            float: right;
+        }
+    
+        .nav-btn>label {
+            display: inline-block;
+            padding: 15px;
+        }
+    
+        .nav>.nav-btn>label:hover,
+        .nav #nav-check:checked~.nav-btn>label {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    
+        .nav>.nav-btn>label>span {
+            display: block;
+            width: 30px;
+            height: 10px;
+            border-top: 2px solid #eee;
+        }
+    
+        .nav>.nav-links {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            background-color: rgba(37, 37, 37, 0.845);
+            height: 0px;
+            transition: all 0.3s ease-in;
+            overflow-y: hidden;
+            top: 75px;
+            left: 0px;
+        }
+    
+        .nav-links a {
+            display: block;
+            padding: 25px;
+        }
+    
+        .nav>#nav-check:not(:checked)~.nav-links {
+            height: 0px;
+        }
+    
+        .nav>#nav-check:checked~.nav-links {
+            height: calc(100vh - 50px);
+            overflow-y: auto;
+        }
+    
+        .wrapper {
+            flex-direction: column-reverse;
+            height: max-content;
+            align-items: flex-start;
+    
+        }
+    
+        .trending,
+        .box {
+            width: 100%;
+            padding: 0 20px;
+        }
 }
+
+/* Tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {}
