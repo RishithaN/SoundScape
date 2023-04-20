@@ -883,7 +883,72 @@ body {
     background-color: #00000044;
     border-radius: 10px;
 }
+/* flip theme css */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.themeflip {
+    position: fixed;
+    bottom: 0px;
+    left: 50px;
+}
+ label {
+	 -webkit-perspective: 1000px;
+	 perspective: 1000px;
+	 -webkit-transform-style: preserve-3d;
+	 transform-style: preserve-3d;
+	 display: block;
+	 width: 50px;
+	 height: 50px;
+	 -webkit-transform: translate(-50%, -50%);
+	 transform: translate(-50%, -50%);
+	 cursor: pointer;
+}
+ .cardnew {
+	 position: relative;
+	 height: 100%;
+	 width: 100%;
+	 -webkit-transform-style: preserve-3d;
+	 transform-style: preserve-3d;
+	 -webkit-transition: all 600ms;
+	 transition: all 600ms;
+	 z-index: 20;
+}
+ .cardnew div {
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 background: #fff;
+	 text-align: center;
+	 line-height: 200px;
+	 -webkit-backface-visibility: hidden;
+	 backface-visibility: hidden;
+	 border-radius: 2px;
+     color: black;
+}
+ .cardnew .back {
+	 background: #222;
+	 color: #fff;
+	 -webkit-transform: rotateX(180deg);
+	 transform: rotateX(180deg);
+}
+ label:hover .cardnew {
+	 -webkit-transform: rotateX(20deg);
+	 transform: rotateX(20deg);
+	 box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+}
+ input {
+	 display: none;
+}
+ :checked + .cardnew {
+	 transform: rotateX(180deg);
+	 -webkit-transform: rotateX(180deg);
+}
+ label:hover :checked + .cardnew {
+	 transform: rotateX(160deg);
+	 -webkit-transform: rotateX(160deg);
+	 box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
 /* Tablet only */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
