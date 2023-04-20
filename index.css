@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -165,7 +172,7 @@ body {
 }
 
 .wrapper {
-    height: 50vh;
+    height: 55vh;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 90%);
     display: flex;
@@ -206,11 +213,16 @@ body {
 
 .st {
     margin-bottom: 10px;
+    font-family: 'Arimo', sans-serif;
 }
 
 .sd,
 .sm {
     padding-left: 50px;
+}
+
+.sa,.sd,.sm{
+    font-family: 'Arimo', sans-serif;
 }
 
 .details {
@@ -246,10 +258,15 @@ body {
 .head {
     font-size: 20px;
     margin-bottom: 40px;
+    font-family: 'Chivo Mono', monospace;
 }
 
 .songname {
     font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.singer .plays {
+    font-family: 'Arimo', sans-serif;
 }
 
 .midbox {
@@ -313,19 +330,27 @@ body {
     outline: none;
     border: none;
     width: 30px;
+    margin-right: 20px;
 }
 
 .b3 img {
     width: 100%;
 }
 
-.artists {
+.artistsbox{
+    margin: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.0525) 100%);
+    border-radius: 20px;
+    padding: 25px;
+    width: 60%;
+}
 
+.artists,.genres {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 60%;
+    width: 100%;
 
 }
 
@@ -333,8 +358,10 @@ body {
 .a2,
 .a3,
 .a4 {
-    width: 100px;
-    padding: 40px;
+    width: 120px;
+    height: 120px;
+    /* padding: 20px; */
+    margin-top: 20px;
     align-content: center;
 }
 
@@ -342,7 +369,7 @@ body {
 .a2 img,
 .a3 img,
 .a4 img {
-    height: 100px;
+    height: 120px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -355,43 +382,42 @@ body {
     font-style: normal;
     font-size: 15px;
     text-align: center;
+    white-space: nowrap;
+    margin-bottom: 5px;
 }
 
 .artists img {
     border-radius: 10px;
 }
 
-.g1 {
-    width: 139px;
-    height: 79px;
-    background: rgba(250, 146, 196, 0.6);
-    border-radius: 10px;
-    display: inline-block;
+.genres {
+    margin-top: 20px;
+}
 
+.g1,.g2,.g3,.g4 {
+    width: 150px;
+    height: 90px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.g1 {
+    background: rgba(250, 146, 196, 0.6);
 }
 
 .g2 {
-    width: 139px;
-    height: 79px;
     background: rgba(250, 146, 146, 0.6);
-    border-radius: 10px;
-    display: inline-block;
 }
 
 .g3 {
-    width: 139px;
-    height: 79px;
     background: rgba(146, 250, 187, 0.6);
-    border-radius: 10px;
-    display: inline-block;
 }
 
 .g4 {
-    width: 139px;
-    height: 79px;
     background: rgba(146, 218, 250, 0.6);
-    border-radius: 10px;
-    display: inline-block;
 }
 
 
@@ -399,13 +425,17 @@ body {
 .subtitle2 {
     font-style: normal;
     font-size: 24px;
-    font-family: 'Arimo';
+    font-family: 'Chivo Mono', monospace;
 }
 
-.genres {
-    display: inline-block;
-    padding-left: 20px;
+.genrebox {
+    margin: 20px 10px;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.0525) 100%); */
+    border-radius: 20px;
+    padding: 25px;
+    width: 60%;
 }
+
 
 .subdivtitle {
     font-family: 'Oldenburg';
@@ -414,40 +444,19 @@ body {
     font-size: 18px;
     line-height: 25px;
     margin-left: 10px;
+    width: 50px;;
     color: #FFFFFF;
 }
 
-.subdivimg1 {
+.subdivimg{
     position: absolute;
-    width: 214px;
-    height: 234px;
-    left: 130px;
-    top: 345px;
+    width: 50%;
+    /* width: 214px;
+    height: 234px; */
+    right: 0;
+    top: 10%;
 }
 
-.subdivimg2 {
-    position: absolute;
-    width: 214px;
-    height: 234px;
-    left: 420px;
-    top: 420px;
-}
-
-.subdivimg3 {
-    position: absolute;
-    width: 214px;
-    height: 234px;
-    left: 140px;
-    top: 350px;
-}
-
-.subdivimg4 {
-    position: absolute;
-    width: 214px;
-    height: 234px;
-    left: 490px;
-    top: 420px;
-}
 
 
 /* Both Tablet and Mobile */
@@ -513,21 +522,397 @@ body {
         }
     
         .wrapper {
+            margin-top: 20px;
             flex-direction: column-reverse;
             height: max-content;
             align-items: flex-start;
     
         }
     
-        .trending,
-        .box {
-            width: 100%;
-            padding: 0 20px;
+        .trending {
+            width: 90%;
+            margin: auto;
         }
+        .box {
+            display: none;
+        }
+}
+
+/* music player css */
+
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+*:focus {
+    outline: none;
+}
+
+
+#app-cover {
+    position: fixed;
+    top: 80%;
+    right: 20px;
+    /* left: 60%; */
+    width: 430px;
+    height: 100px;
+    margin: -4px auto;
+}
+
+#player {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+
+#player-track {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    left: 15px;
+    padding: 13px 22px 10px 184px;
+    background-color: #fff7f7;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s ease top;
+    z-index: 1;
+}
+
+#player-track.active {
+    top: -92px;
+}
+
+#album-name {
+    color: #54576f;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#track-name {
+    color: #acaebd;
+    font-size: 13px;
+    margin: 2px 0 13px 0;
+}
+
+#track-time {
+    height: 12px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+
+#current-time {
+    float: left;
+}
+
+#track-length {
+    float: right;
+}
+
+#current-time,
+#track-length {
+    color: transparent;
+    font-size: 11px;
+    background-color: #ffe8ee;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+}
+
+#track-time.active #current-time,
+#track-time.active #track-length {
+    color: #f86d92;
+    background-color: transparent;
+}
+
+#s-area,
+#seek-bar {
+    position: relative;
+    height: 4px;
+    border-radius: 4px;
+}
+
+#s-area {
+    background-color: #ffe8ee;
+    cursor: pointer;
+}
+
+#ins-time {
+    position: absolute;
+    top: -29px;
+    color: #fff;
+    font-size: 12px;
+    white-space: pre;
+    padding: 5px 6px;
+    border-radius: 4px;
+    display: none;
+}
+
+#s-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+#ins-time,
+#s-hover {
+    background-color: #3b3d50;
+}
+
+#seek-bar {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #fd6d94;
+    transition: 0.2s ease width;
+    z-index: 1;
+}
+
+#player-content {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 30px 80px #656565;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#album-art {
+    position: absolute;
+    top: -40px;
+    width: 115px;
+    height: 115px;
+    margin-left: 40px;
+    transform: rotateZ(0);
+    transition: 0.3s ease all;
+    box-shadow: 0 0 0 10px #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#album-art.active {
+    top: -60px;
+    box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+}
+
+#album-art:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: -10px auto 0 auto;
+    background-color: #d6dee7;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #fff;
+    z-index: 2;
+}
+
+#album-art img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+
+#album-art img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#album-art.active img.active {
+    z-index: 1;
+    animation: rotateAlbumArt 3s linear 0s infinite forwards;
+}
+
+@keyframes rotateAlbumArt {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+#buffer-box {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 13px;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-family: Helvetica;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px;
+    margin: -12px auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.19);
+    opacity: 0;
+    z-index: 2;
+}
+
+#album-art img,
+#buffer-box {
+    transition: 0.1s linear all;
+}
+
+#album-art.buffering img {
+    opacity: 0.25;
+}
+
+#album-art.buffering img.active {
+    opacity: 0.8;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+#album-art.buffering #buffer-box {
+    opacity: 1;
+}
+
+#player-controls {
+    width: 250px;
+    height: 100%;
+    margin: 0 5px 0 141px;
+    float: right;
+    overflow: hidden;
+}
+
+.control {
+    width: 33.333%;
+    float: left;
+    padding: 12px 0;
+}
+
+.button {
+    width: 26px;
+    height: 26px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button i {
+    display: block;
+    color: #d6dee7;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1;
+}
+
+.button,
+.button i {
+    transition: 0.2s ease all;
+}
+
+.button:hover {
+    background-color: #d6d6de;
+}
+
+.button:hover i {
+    color: #fff;
+}
+
+/* Card flip css */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    perspective: 1000px; 
+  } */
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    /* position: relative;
+    width: 100%;
+    height: 100%; */
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+/* .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  } */
+
+/* Style the back side */
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-back {
+    display: flex;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000044;
+    border-radius: 10px;
 }
 
 /* Tablet only */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
 /* Mobile only */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    .head {
+        margin-bottom: 20px;
+    }
+    .trending {
+        margin-right: 20px;
+    }
+    .somebox{
+        width: 40%;
+    }
+    .sm,.sd {
+        padding-left: 0px;
+    }
+    .t1{
+        margin-bottom: 0;
+    }
+    .details {
+        width:40%
+    }
+    .artistsbox,.genrebox{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .g1,.g2,.g3,.g4 {
+        margin: 20px;
+    }
+}
