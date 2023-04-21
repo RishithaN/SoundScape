@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Molengo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
 
 *{
     margin: 0;
@@ -40,10 +43,13 @@ body {
 .logo img {
     height: 60px;
     margin:10px;
+    border-radius: 25px;
 }
 
 .logo p{
     font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+    
 }
 
 .nav>.nav-btn {
@@ -213,7 +219,8 @@ body {
 
 .st {
     margin-bottom: 10px;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
 }
 
 .sd,
@@ -221,8 +228,12 @@ body {
     padding-left: 50px;
 }
 
+.sa{
+    font-size: 13px;
+}
+
 .sa,.sd,.sm{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .details {
@@ -231,6 +242,8 @@ body {
     padding-left: 20px;
     width: 30%;
 }
+
+
 
 .somebox {
     display: flex;
@@ -337,12 +350,24 @@ body {
     width: 100%;
 }
 
+.contentbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subbox {
+    width: 60%;
+}
+
 .artistsbox{
     margin: 20px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.0525) 100%);
     border-radius: 20px;
     padding: 25px;
-    width: 60%;
+    width: 100%;
 }
 
 .artists,.genres {
@@ -433,7 +458,7 @@ body {
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.0525) 100%); */
     border-radius: 20px;
     padding: 25px;
-    width: 60%;
+    width: 100%;
 }
 
 
@@ -535,6 +560,15 @@ body {
         }
         .box {
             display: none;
+        }
+        .contentbox {
+            width: 100%;
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
+        .subbox {
+            width: 80%;
+            margin-left: -10%;
         }
 }
 
@@ -869,7 +903,7 @@ body {
 
 /* Style the back side */
 .flip-card-back {
-    color: white;
+    color: black;
     transform: rotateY(180deg);
 
 }
@@ -880,7 +914,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #00000044;
+    /* background-color: #00000044; */
     border-radius: 10px;
 }
 /* flip theme css */
@@ -949,6 +983,7 @@ body {
 	 -webkit-transform: rotateX(160deg);
 	 box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
 }
+
 /* Tablet only */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
@@ -973,11 +1008,28 @@ body {
         width:40%
     }
     .artistsbox,.genrebox{
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
     .g1,.g2,.g3,.g4 {
         margin: 20px;
     }
+}
+
+/* flip dark */
+
+.sun i{
+    color: white;
+    font-size: 40px;
+    z-index: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
