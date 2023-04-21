@@ -44,7 +44,7 @@ function changeToLight(){
 
 
 function changeToDark(){
-  window.location.href = "index.html";
+  window.location.href = "dark.html";
 }
 
 $(function () {

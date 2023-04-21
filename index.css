@@ -14,7 +14,7 @@
     color: #ffffff;
 }
 body {
-background: rgb(147, 20, 102);
+    background: rgb(147, 20, 102);
     background: linear-gradient(248deg, rgba(147, 20, 102, 1) 15%, rgba(80, 18, 120, 1) 48%, rgba(18, 5, 84, 1) 75%, rgba(44, 11, 111, 1) 96%);
     background-size: cover;
     min-height: 100vh;
