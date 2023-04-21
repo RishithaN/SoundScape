@@ -105,8 +105,8 @@ const songs = [
   progress.onchange = function () {
     song.play();
     song.currentTime = progress.value;
-    playBtn.classList.remove("bx-play");
-    playBtn.classList.add("bx-pause");
+    playBtn.classList.add("bx-play");
+    playBtn.classList.remove("bx-pause");
     img.classList.add("play");
   };
   
