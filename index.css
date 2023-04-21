@@ -324,8 +324,8 @@ body {
 .b1 {
     height: 50px;
     background: #4FC7C7;
-    outline: none;
-    border: none;
+    /* outline: none;
+    border: none; */
     padding: 15px 35px;
     border-radius: 30px;
 }
@@ -335,9 +335,15 @@ body {
     background: none;
     padding: 15px 35px;
     border-radius: 30px;
+    width: 140px;
     border: 2px solid #4FC7C7;
 }
  
+.b2:hover {
+    background-color: #4FC7C7;
+    border: none;
+}
+
 .b3 {
     background: none;
     outline: none;
@@ -347,6 +353,101 @@ body {
 }
 
 .b3 img {
+    width: 100%;
+}
+
+.b1 {
+    /* color: #fff; */
+    padding: 10px 25px;
+    /* font-family: 'Lato', sans-serif;
+    font-weight: 500; */
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+    background: #4FC7C7;
+    /* background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%); */
+    width: 140px;
+    height: 50px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 30px;
+}
+
+.b1 span {
+    width: 100%;
+    height: 100%;
+}
+
+.b1:before,
+.b1:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #4FC7C7;
+    transition: all 0.3s ease;
+}
+
+.b1:before {
+    height: 0%;
+    width: 2px;
+}
+
+.b1:after {
+    width: 0%;
+    height: 2px;
+}
+
+.b1:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.b1:hover:before {
+    height: 100%;
+}
+
+.b1:hover:after {
+    width: 100%;
+}
+
+.b1 span:hover {
+    color: #4FC7C7;
+}
+
+.b1 span:before,
+.b1 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #4FC7C7;
+    transition: all 0.3s ease;
+}
+
+.b1 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.b1 span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.b1 span:hover:before {
+    height: 100%;
+}
+
+.b1 span:hover:after {
     width: 100%;
 }
 
@@ -914,7 +1015,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #00000044; */
+    background-color: #00000044;
     border-radius: 10px;
 }
 /* flip theme css */
@@ -926,7 +1027,7 @@ body {
     bottom: 0px;
     left: 50px;
 }
- label {
+ /* label {
 	 -webkit-perspective: 1000px;
 	 perspective: 1000px;
 	 -webkit-transform-style: preserve-3d;
@@ -937,7 +1038,7 @@ body {
 	 -webkit-transform: translate(-50%, -50%);
 	 transform: translate(-50%, -50%);
 	 cursor: pointer;
-}
+} */
  .cardnew {
 	 position: relative;
 	 height: 100%;
@@ -1030,6 +1131,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
 
 }
